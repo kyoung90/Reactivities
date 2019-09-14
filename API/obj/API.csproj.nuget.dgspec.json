@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Api/API.csproj": {}
+    "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/API.csproj": {}
   },
   "projects": {
-    "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Api/API.csproj": {
+    "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Api/API.csproj",
+        "projectUniqueName": "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Api/API.csproj",
+        "projectPath": "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/API.csproj",
         "packagesPath": "/Users/forwardlearning/.nuget/packages/",
-        "outputPath": "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Api/obj/",
+        "outputPath": "/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
