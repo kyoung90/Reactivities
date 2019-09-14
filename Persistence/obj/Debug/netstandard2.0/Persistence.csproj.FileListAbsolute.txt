@@ -1,0 +1,12 @@
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/bin/Debug/netstandard2.0/Persistence.deps.json
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/bin/Debug/netstandard2.0/Persistence.dll
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/bin/Debug/netstandard2.0/Persistence.pdb
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/bin/Debug/netstandard2.0/Domain.dll
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/bin/Debug/netstandard2.0/Domain.pdb
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.csprojAssemblyReference.cache
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.csproj.CoreCompileInputs.cache
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.AssemblyInfoInputs.cache
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.AssemblyInfo.cs
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.csproj.CopyComplete
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.dll
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.pdb
