@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { Header, Icon, List } from 'semantic-ui-react'
+import { Header, Icon, List} from 'semantic-ui-react'
 import './App.css';
 
 class App extends Component{
@@ -19,6 +19,7 @@ class App extends Component{
   }
 
   render(){
+    let fixed : boolean = false
     return (
       <div>
         <Header as='h2'>
@@ -28,6 +29,8 @@ class App extends Component{
         <List>
           {this.state.values.map((value: any) => <List.Item key={value.id}>{value.name}</List.Item>)}
         </List>
+
+        <HomepageLayout />
       </div>
     );
   }
