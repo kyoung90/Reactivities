@@ -3,6 +3,7 @@ import axios from "axios";
 import { Header, Icon, List } from "semantic-ui-react";
 import "./styles.css";
 import { IActivity } from "../models/Activity";
+import NavBar from "../../features/nav/NavBar";
 
 const App = () => {
   const [activities, setActivities] = useState<IActivity[]>([]);
@@ -16,17 +17,14 @@ const App = () => {
   }, []);
 
   return (
-    <List>
-      <Header as="h2">
-        <Icon name="users" />
-        <Header.Content>Reactivities</Header.Content>
-      </Header>
+    <div>
+      <NavBar />
       <List>
         {activities.map(activity => (
-          <List.Item key={activity.id}>{activity.title}</List.Item>
+          <List.Item key={activity.id}>{activity.title}Hello</List.Item>
         ))}
       </List>
-    </List>
+    </div>
   );
 };
 
