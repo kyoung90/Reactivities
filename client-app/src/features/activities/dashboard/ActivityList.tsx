@@ -11,20 +11,24 @@ const ActivityList: React.FC<IProps> = ({ activities }) => {
     <Segment clearing>
       <Item.Group divided>
         {activities.map(activity => {
-          return <Item key={activity.id}>
-            <Item.Content>
-              <Item.Header as="a">{activity.title}</Item.Header>
-              <Item.Meta>{activity.date}</Item.Meta>
-              <Item.Description>
-                <div>{activity.description}</div>
-                <div>{activity.city}, {activity.venue}</div>
-              </Item.Description>
-              <Item.Extra>
-                <Button floated="right" content="View" color="blue"></Button>
-                <Label basic content={activity.category} />
-              </Item.Extra>
-            </Item.Content>
-          </Item>;
+          return (
+            <Item key={activity.id}>
+              <Item.Content>
+                <Item.Header as="a">{activity.title}</Item.Header>
+                <Item.Meta>{activity.date}</Item.Meta>
+                <Item.Description>
+                  <div>{activity.description}</div>
+                  <div>
+                    {activity.city}, {activity.venue}
+                  </div>
+                </Item.Description>
+                <Item.Extra>
+                  <Button floated="right" content="View" color="blue"></Button>
+                  <Label basic content={activity.category} />
+                </Item.Extra>
+              </Item.Content>
+            </Item>
+          );
         })}
       </Item.Group>
     </Segment>
