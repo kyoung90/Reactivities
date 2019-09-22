@@ -1,6 +1,5 @@
-import axios, { AxiosResponse, AxiosPromise } from 'axios'
+import axios, { AxiosResponse } from 'axios'
 import { IActivity } from '../models/Activity'
-import { resolve } from 'q'
 
 axios.defaults.baseURL = "http://localhost:5000/api"
 
