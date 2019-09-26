@@ -10,24 +10,23 @@ namespace API.Middleware
 {
     public class ErrorHandlingMiddleware
     {
-        private readonly RequestDelegate next;
-        private readonly ILogger<ErrorHandlingMiddleware> logger;
-
+        private readonly RequestDelegate _next;
+        private readonly ILogger<ErrorHandlingMiddleware> _logger;
         public ErrorHandlingMiddleware(RequestDelegate next, ILogger<ErrorHandlingMiddleware> logger)
         {
-            this.next = next;
-            this.logger = logger;
+            _logger = logger;
+            _next = next;
         }
 
         public async Task Invoke(HttpContext context)
         {
             try
             {
-                await this.next(context);
-            }
+                await _next(context);
+            } 
             catch (Exception ex)
             {
-                await HandleExceptionAsync(context, ex, this.logger);
+                await HandleExceptionAsync(context, ex, _logger);
             }
         }
 
@@ -42,7 +41,6 @@ namespace API.Middleware
                     errors = re.Errors;
                     context.Response.StatusCode = (int)re.Code;
                     break;
-
                 case Exception e:
                     logger.LogError(ex, "SERVER ERROR");
                     errors = string.IsNullOrWhiteSpace(e.Message) ? "Error" : e.Message;
@@ -51,13 +49,14 @@ namespace API.Middleware
             }
 
             context.Response.ContentType = "application/json";
-            if(errors != null){
-                var result = JsonConvert.SerializeObject(new{
+            if (errors != null)
+            {
+                var result = JsonConvert.SerializeObject(new 
+                {
                     errors
                 });
 
                 await context.Response.WriteAsync(result);
-                
             }
         }
     }
