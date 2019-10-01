@@ -2,11 +2,12 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Errors;
+using Application.Interfaces;
 using Domain;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
-using Persistence;
+
 
 namespace Application.User
 {
@@ -31,9 +32,11 @@ namespace Application.User
         {
             private readonly UserManager<AppUser> userManager;
             private readonly SignInManager<AppUser> signInManager;
+            private readonly IJwtGenerator _jwtGenerator;
 
-            public Handler(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+            public Handler(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IJwtGenerator jwtGenerator)
             {
+                this._jwtGenerator = jwtGenerator;
                 this.userManager = userManager;
                 this.signInManager = signInManager;
             }
@@ -56,7 +59,7 @@ namespace Application.User
                     return new User
                     {
                         DisplayName = user.DisplayName,
-                        Token = "This Will Be A Token",
+                        Token = this._jwtGenerator.CreateToken(user),
                         Username = user.UserName,
                         Image = null
                     };

@@ -19,3 +19,5 @@
 /Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/obj/Debug/netcoreapp2.2/API.csproj.CopyComplete
 /Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/obj/Debug/netcoreapp2.2/API.dll
 /Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/obj/Debug/netcoreapp2.2/API.pdb
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/bin/Debug/netcoreapp2.2/Infrastructure.dll
+/Users/forwardlearning/Documents/dev/NetCourse/Reactivities/API/bin/Debug/netcoreapp2.2/Infrastructure.pdb
