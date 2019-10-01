@@ -1,13 +1,19 @@
 import { observable, action, computed, configure, runInAction } from "mobx";
-import { createContext, SyntheticEvent } from "react";
+import { SyntheticEvent } from "react";
 import { IActivity } from "../models/Activity";
 import agent from "../api/agent";
 import { history } from "../..";
 import { toast } from "react-toastify";
+import { rootStore } from "./rootStore";
 
 configure({ enforceActions: "always" });
 
-class ActivityStore {
+export default class ActivityStore {
+  rootStore: rootStore;
+  constructor(rootStore: rootStore) {
+    this.rootStore = rootStore;
+  }
+
   @observable activityRegistry = new Map();
 
   @observable activity: IActivity | null = null;
@@ -62,7 +68,7 @@ class ActivityStore {
     let activity = this.getActivity(id);
     if (activity) {
       this.activity = activity;
-      return activity
+      return activity;
     } else {
       try {
         this.loadingInitial = true;
@@ -74,7 +80,7 @@ class ActivityStore {
           this.activityRegistry.set(activity.id, activity);
           this.loadingInitial = false;
         });
-        return activity
+        return activity;
       } catch (error) {
         runInAction("get activity error", () => {
           this.loadingInitial = false;
@@ -103,11 +109,10 @@ class ActivityStore {
       });
       history.push(`/activities/${activity.id}`);
     } catch (error) {
-      
       runInAction("create activity error", () => {
         this.submitting = false;
       });
-      toast.error("Problem submitting data")
+      toast.error("Problem submitting data");
       console.log(error.response);
     }
   };
@@ -152,5 +157,3 @@ class ActivityStore {
     }
   };
 }
-
-export default createContext(new ActivityStore());
