@@ -45,6 +45,7 @@ namespace API
                 });
             });
             services.AddScoped<IJwtGenerator, JwtGenerator>();
+            services.AddScoped<IUserAccessor, UserAccessor>();
             services.AddMediatR(typeof(List.Handler).Assembly);
             services.AddMvc(opt =>
             {
